@@ -22,6 +22,11 @@ mainwindow.resizable(0, 0)
 mainwindow.title("Jake's Youtube Downloader")
 # mainwindow.iconbitmap("icon.ico")  # BROKEN WHEN CONVERTED TO EXE FOR SOME REASON
 
+downloadlocationwindow = tk.Tk()
+downloadlocationwindow.geometry("120x90")
+downloadlocationwindow.resizable(0, 0)
+downloadlocationwindow.title("Jake's Youtube Downloader")
+
 
 options = [
     "mp4",
