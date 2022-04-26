@@ -8,8 +8,9 @@ def start():
     print("Selected URL: ", urlget)
     print("Selected Format: ", formatget)
     ydl_opts = {
-        'outtmpl': 'c:/tmp/%(title)s.%(ext)s',
+        'outtmpl': 'c:/tmp/%(title)s.%(ext)s'--restrict-filenames,
         'format': formatget,
+        'ratelimit': 2000000000,
     }
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
         ydl.download([urlget])
@@ -19,7 +20,7 @@ mainwindow = tk.Tk()
 mainwindow.geometry("475x330")
 mainwindow.resizable(0, 0)
 mainwindow.title("Jake's Youtube Downloader")
-# mainwindow.iconbitmap("icon.ico")   # BROKEN WHEN CONVERTED TO EXE FOR SOME REASON
+# mainwindow.iconbitmap("icon.ico")  # BROKEN WHEN CONVERTED TO EXE FOR SOME REASON
 
 
 options = [
@@ -27,8 +28,15 @@ options = [
     "webm",
     "mkv",
     "mov",
+    "m4a",
+    "avi",
+    "wmf",
+    "flv",
     "mp3",
     "ogg",
+    "aac",
+    "wav",
+    
 ]
 
 selected = tk.StringVar(mainwindow)
