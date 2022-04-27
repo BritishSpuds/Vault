@@ -14,7 +14,7 @@ def start():
         'format': formatget,
         'ratelimit': rateget,
     }
-    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+    with ydl.YoutubeDL(ydl_opts) as ydl:
         ydl.download([urlget])
 
 
