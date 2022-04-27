@@ -1,5 +1,5 @@
 import tkinter as tk
-import youtube_dl
+import youtube_dl as ydl
 
 
 def start():
