@@ -79,5 +79,6 @@ urllabel.place(x=15, y=25)
 urlentry.place(x=50, y=25)
 startbutton.place(x=375, y=25)
 formatselection.place(x=15, y=55)
+ratelimitselection.place(x=15, y=105)
 
 mainwindow.mainloop()
