@@ -3,10 +3,12 @@ import youtube_dl
 
 
 def start():
-    urlget = urlentry.get()
+    urlget = str(urlentry.get())
     formatget = str(selected.get())
+    rateget = int(rateselected.get())
     print("Selected URL: ", urlget)
     print("Selected Format: ", formatget)
+    print("Selected Rate Limit: ", rateget, "Bytes/s")
     ydl_opts = {
         'outtmpl': 'c:/tmp/%(title)s.%(ext)s'--restrict-filenames,
         'format': formatget,
@@ -41,7 +43,17 @@ options = [
     "ogg",
     "aac",
     "wav",
-    
+]
+
+rateoptions = [
+    "5000000000",
+    "2000000000",
+    "1000000000",
+    "500000000",
+    "250000000",
+    "100000000",
+    "10000000",
+    "1000000",
 ]
 
 selected = tk.StringVar(mainwindow)
@@ -56,6 +68,7 @@ urllabel = tk.Label(mainwindow, fg="black", text="Url:")
 urlentry = tk.Entry(mainwindow, fg="black", bg="white", width=50)
 startbutton = tk.Button(mainwindow, text="Start", width=10, height=3, bg="white", fg="black", command=start)
 formatselection = tk.OptionMenu(mainwindow, selected, *options, )
+ratelimitselection = tk.OptionMenu(mainwindow, rateselected, *rateoptions, )
 
 downloaderlabelframe.place(x=5, y=5)
 converterlabelframe.place(x=5, y=95)
