@@ -46,7 +46,7 @@ def callback():
     directoryentry.insert(string=file, index=0)
 
 
-def helpwindow():
+def formathelpwindow():
     tkhelpwindow = tk.Tk()
     tkhelpwindow.geometry("375x140")
     tkhelpwindow.resizable(0, 0)
@@ -105,7 +105,7 @@ downloaderlabelframe = tk.LabelFrame(mainwindow, text="Downloader", bg="grey94",
 urllabel = tk.Label(mainwindow, fg="black", text="Url:")
 urlentry = tk.Entry(mainwindow, fg="black", bg="white", width=50)
 startbutton = tk.Button(mainwindow, text="Start", width=10, height=3, bg="grey94", fg="black", command=start)
-helpbutton = tk.Button(mainwindow, text="Help", width=8, height=1, bg="grey94", fg="black", command=helpwindow)
+helpbutton = tk.Button(mainwindow, text="Help", width=8, height=1, bg="grey94", fg="black", command=formathelpwindow)
 formatselection = tk.OptionMenu(mainwindow, selected, *formats,)
 rateselection = tk.OptionMenu(mainwindow, rateselected, *rateoptions,)
 
