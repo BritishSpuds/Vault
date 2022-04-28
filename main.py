@@ -31,10 +31,10 @@ def start():
         print("Selected Format: ", formatget)
         print("Selected Rate Limit: ", ratemb, "(", rateget, ")", "Bytes/s")
         ydl_opts = {
-            'outtmpl': 'c:/tmp/%(title)s.%(ext)s',
-            'format': formatget,
-            'limitrate': ratemb,
-        }
+                    'outtmpl': 'c:/tmp/%(title)s.%(ext)s',
+                    'format': formatget,
+                    'limitrate': ratemb,
+                    }
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             ydl.download([urlget])
 
