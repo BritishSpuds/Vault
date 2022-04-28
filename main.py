@@ -33,7 +33,7 @@ def start():
         ydl_opts = {
             'outtmpl': 'c:/tmp/%(title)s.%(ext)s',
             'format': formatget,
-            'ratelimit': ratemb,
+            'limitrate': ratemb,
         }
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             ydl.download([urlget])
