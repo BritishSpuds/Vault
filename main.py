@@ -29,7 +29,7 @@ def start():
             print("Shorten Error")
         print("Selected URL: ", urlget)
         print("Selected Format: ", formatget)
-        print("Selected Rate Limit: ", ratemb, "Bytes/s")
+        print("Selected Rate Limit: ", ratemb, "(", rateget, ")", "Bytes/s")
         ydl_opts = {
             'outtmpl': 'c:/tmp/%(title)s.%(ext)s',
             'format': formatget,
