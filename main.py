@@ -60,10 +60,12 @@ tabControl = ttk.Notebook(mainwindow)
 
 DownloaderTab = ttk.Frame(tabControl)
 ConverterTab = ttk.Frame(tabControl)
+AutoclickerTab = ttk.Frame(tabControl)
 HelpTab = ttk.Frame(tabControl)
 
 tabControl.add(DownloaderTab, text="Downloader")
 tabControl.add(ConverterTab, text="Converter")
+tabControl.add(AutoclickerTab, tex="Autoclicker)
 tabControl.add(HelpTab, text="Help")
 tabControl.pack(expand=1, fill="both")
 
