@@ -67,7 +67,6 @@ tabControl.add(DownloaderTab, text="Downloader")
 tabControl.add(ConverterTab, text="Converter")
 tabControl.add(AutoclickerTab, tex="Autoclicker)
 tabControl.add(HelpTab, text="Help")
-tabControl.pack(expand=1, fill="both")
 
 
 formats = [
@@ -120,8 +119,9 @@ startconverter = tk.Button(ConverterTab, text="Start\nConverter", width=10, heig
 helplabelframe = tk.LabelFrame(HelpTab, text="Help", bg="grey94", width=460, height=300)
 helplabel = tk.Label(HelpTab, fg="black", bg="grey94", text="I will eventually put some helpful text here :)")
 
-downloaderlabelframe.place(x=5, y=0)
-converterlabelframe.place(x=5, y=0)
+tabControl.place(x=5, y=5, expand=1, fill="both")
+downloaderlabelframe.place(x=15, y=0)
+converterlabelframe.place(x=15, y=0)
 helplabelframe.place(x=5, y=0)
 urllabel.place(x=15, y=25)
 urlentry.place(x=50, y=25)
