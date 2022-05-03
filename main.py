@@ -2,7 +2,13 @@ import tkinter as tk
 from tkinter import filedialog
 from tkinter import ttk
 import youtube_dl
+import pyautogui
 
+size = pyautogui.size()
+screenwidthx = size[0]
+screenwidthy = size[1]
+
+print(screenwidthx,"x",screenwidthy)
 
 def startdownloader():
     urlget = urlentry.get()
@@ -62,11 +68,13 @@ DownloaderTab = ttk.Frame(tabControl)
 ConverterTab = ttk.Frame(tabControl)
 AutoclickerTab = ttk.Frame(tabControl)
 HelpTab = ttk.Frame(tabControl)
+CreditsTab = ttk.Frame(tabControl)
 
 tabControl.add(DownloaderTab, text="Downloader")
 tabControl.add(ConverterTab, text="Converter")
-tabControl.add(AutoclickerTab, tex="Autoclicker)
+tabControl.add(AutoclickerTab, text="Autoclicker")
 tabControl.add(HelpTab, text="Help")
+tabControl.add(CreditsTab, text="Credits")
 
 
 formats = [
@@ -114,15 +122,26 @@ directoryentry = tk.Entry(ConverterTab, fg="black", bg="white", width=46)
 directorylabel = tk.Label(ConverterTab, fg="black", bg="grey94", text="Directory:")
 startconverter = tk.Button(ConverterTab, text="Start\nConverter", width=10, height=3, bg="grey94", fg="black", command=startconverter)
 
+# Autoclicker Tab
+
+autoclickerlabelframe = tk.LabelFrame(AutoclickerTab, text="Autoclicker", bg="grey94", width=460, height=300)
+
 # Help Tab
 
 helplabelframe = tk.LabelFrame(HelpTab, text="Help", bg="grey94", width=460, height=300)
 helplabel = tk.Label(HelpTab, fg="black", bg="grey94", text="I will eventually put some helpful text here :)")
 
-tabControl.place(x=5, y=5, expand=1, fill="both")
-downloaderlabelframe.place(x=15, y=0)
-converterlabelframe.place(x=15, y=0)
+# Credits tab
+
+creditslabelframe = tk.LabelFrame(CreditsTab, text="Credits", bg="grey94", width=460, height=300)
+creditslabel = tk.Label(CreditsTab, fg="black", bg="grey94", text="I will eventually put some crediting text here :)")
+
+tabControl.pack(expand=1, fill="both")
+downloaderlabelframe.place(x=5, y=0)
+converterlabelframe.place(x=5, y=0)
+autoclickerlabelframe.place(x=5, y=0)
 helplabelframe.place(x=5, y=0)
+creditslabelframe.place(x=5, y=0)
 urllabel.place(x=15, y=25)
 urlentry.place(x=50, y=25)
 startdownloader.place(x=370, y=25)
@@ -134,6 +153,7 @@ directoryentry.place(x=74, y=25)
 directorylabel.place(x=15, y=25)
 startconverter.place(x=370, y=25)
 helplabel.place(x=15, y=15)
+creditslabel.place(x=15, y=15)
 
 
 mainwindow.mainloop()
