@@ -1,9 +1,9 @@
-# Jake's Youtube Downloader
+# Jake's YouTube Video Downloader #
 Short and simple YouTube video downloader coded entirely in Python.
 
 The main purpose of this program is to make the use of sketchy YouTube downloader websites obsolete. This project uses the youtube-dl module to download youtube videos using the url of the video (e.g. https://www.youtube.com/watch?v=dQw4w9WgXcQ). The whole project is open source and all avalible in a convient .exe file for you to open and run on any computer, anywhere, even without an internet connection.
 
-= Help =
+### Help and info ###
 
 Along with in-program buttons that display additional help information, I will eventually get around to putting a whole help documentation here, on github.
 
