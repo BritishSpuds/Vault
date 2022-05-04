@@ -4,11 +4,11 @@ from tkinter import ttk
 import youtube_dl
 import pyautogui
 
-size = pyautogui.size()
-screenwidthx = size[0]
-screenwidthy = size[1]
+size = pyautogui.size() # Get screen size
+screenwidthx = size[0] # Give the variable "screenwidthx" the horizontal pixel count
+screenwidthy = size[1] # Give the variable "screenwidthy" the verical pixel count
 
-print(screenwidthx,"x",screenwidthy)
+print(screenwidthx,"x",screenwidthy) # prints the horizontal and vertical pixel count seperated by an x
 
 def startdownloader():
     urlget = urlentry.get()
@@ -20,7 +20,7 @@ def startdownloader():
         formatget = str(selected.get())
         rateget = str(rateselected.get())
         ratemb = 10000000
-        if rateget == "1gb/s":
+        if rateget == "1gb/s": # converts values like '1gb/s' into 1000000000, whch is 1gb in singular bytes.
             ratemb = 1000000000
         elif rateget == "500mb/s":
             ratemb = 500000000
@@ -34,27 +34,27 @@ def startdownloader():
             ratemb = 1000000
         else:
             print("Shorten Error")
-        print("Selected URL: ", urlget)
+        print("Selected URL: ", urlget) # print useful info into the console
         print("Selected Format: ", formatget)
         print("Selected Rate Limit: ", ratemb, "(", rateget, ")", "Bytes/s")
-        ydl_opts = {
+        ydl_opts = { # options for downloading the video
                     'outtmpl': 'c:/tmp/%(title)s.%(ext)s',
                     'format': formatget,
                     'limitrate': ratemb,
                     }
-        with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-            ydl.download([urlget])
+        with youtube_dl.YoutubeDL(ydl_opts) as ydl: # with the options in "ydl_opts"...
+            ydl.download([urlget]) # download the url in "urlget"
 
 
-def callback():
-    file = str(filedialog.askopenfilename())
+def openfile(): # opens the file manager to select a file when called
+    file = str(filedialog.askopenfilename()) # opens file manager and waits for a file to be selected before putting the directory into the variable "file"
     print("Selected File:", file)
-    directoryentry.delete(0, "end")
-    directoryentry.insert(string=file, index=0)
+    directoryentry.delete(0, "end") # deletes whats currently in the "directoryentry"
+    directoryentry.insert(string=file, index=0) # adds the new directory into "directoryentry"
 
 
-def startconverter():
-    pass
+def startconverter(): # converts the file when called
+    pass # not finished
 
 
 mainwindow = tk.Tk()
@@ -116,7 +116,7 @@ rateselection = tk.OptionMenu(DownloaderTab, rateselected, *rateoptions)
 # Converter Tab
 
 converterlabelframe = tk.LabelFrame(ConverterTab, text="Converter", bg="grey94", width=460, height=300)
-openfilebutton = tk.Button(ConverterTab, text="select file", bg="grey94", fg="black", width=10, height=2, command=callback)
+openfilebutton = tk.Button(ConverterTab, text="select file", bg="grey94", fg="black", width=10, height=2, command=openfile)
 converterformatselection = tk.OptionMenu(ConverterTab, converterselected, *formats)
 directoryentry = tk.Entry(ConverterTab, fg="black", bg="white", width=46)
 directorylabel = tk.Label(ConverterTab, fg="black", bg="grey94", text="Directory:")
@@ -134,7 +134,7 @@ helplabel = tk.Label(HelpTab, fg="black", bg="grey94", text="I will eventually p
 # Credits tab
 
 creditslabelframe = tk.LabelFrame(CreditsTab, text="Credits", bg="grey94", width=460, height=300)
-creditslabel = tk.Label(CreditsTab, fg="black", bg="grey94", text="I will eventually put some crediting text here :)")
+creditslabel = tk.Label(CreditsTab, fg="black", bg="grey94", text="I will eventually put some credits here :)")
 
 tabControl.pack(expand=1, fill="both")
 downloaderlabelframe.place(x=5, y=0)
