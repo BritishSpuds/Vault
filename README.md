@@ -1,12 +1,7 @@
 # Vault #
-Short and simple YouTube video downloader coded entirely in Python.
+I will eventually add a description, documentation and a help section to this readme.md file. But ill get to that at some other point in time. For now, all you need to know is this is a project developed by a 16 year old computer science student in my spare time. This project is currently unfinished as it only includes a video downloader. Eventually i plan for this program to have alot of small features you may google every now and then (video downloader, file converter, calculator, autoclicker, automatic downloads, etc). This project will probally be my biggest coding project to date.
+### Description ###
 
-The main purpose of this program is to make the use of sketchy YouTube downloader websites obsolete. This project uses the youtube-dl module to download youtube videos using the url of the video (e.g. https://www.youtube.com/watch?v=dQw4w9WgXcQ). The whole project is open source and all avalible in a convient .exe file for you to open and run on any computer, anywhere, even without an internet connection.
+### Information / Help ###
 
-### Help and info ###
-
-Along with in-program buttons that display additional help information, I will eventually get around to putting a whole help documentation here, on github.
-
-I really appreciate you coming to check out my project! this is my first large-ish project in coding. I am currently a Year 11 student learning computer science at school and i wish to continue learning computer science, coding, networking and most computer systems when i enter collage.
-
-There is a dontation link on the right hand side of the screen that can be used to tip me money if you feel generous enough :)
+### Documentation ###
