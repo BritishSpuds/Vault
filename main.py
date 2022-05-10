@@ -3,12 +3,18 @@ from tkinter import filedialog
 from tkinter import ttk
 import youtube_dl
 import pyautogui
+import random as r
 
 size = pyautogui.size() # Get screen size
-screenwidthx = size[0] # Give the variable "screenwidthx" the horizontal pixel count
-screenwidthy = size[1] # Give the variable "screenwidthy" the verical pixel count
+location = pyautogui.position() # Get Mouse Location
+screenwidthx = size[0]
+screenwidthy = size[1]
 
-print(screenwidthx,"x",screenwidthy) # prints the horizontal and vertical pixel count seperated by an x
+locationx = position[0]
+locationy = position[1]
+
+print(screenwidthx, "x", screenwidthy)
+print(locationx, "x", locationy)
 
 def startdownloader():
     urlget = urlentry.get()
@@ -55,6 +61,12 @@ def openfile(): # opens the file manager to select a file when called
 
 def startconverter(): # converts the file when called
     pass # not finished
+
+def autoclicker():
+    while True:
+        randomx = r.randint(0, screenwidthx)
+        randomy = r.randint(0, screenwidthy)
+        pyautogui.click(randomx, randomy)
 
 
 mainwindow = tk.Tk()
