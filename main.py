@@ -66,13 +66,23 @@ tabControl = ttk.Notebook(mainwindow)
 
 DownloaderTab = ttk.Frame(tabControl)
 ConverterTab = ttk.Frame(tabControl)
+CalculatorTab = ttk.Frame(tabControl)
 AutoclickerTab = ttk.Frame(tabControl)
+AutoDownloaderTab = ttk.Frame(tabControl)
+FileArchiverTab = ttk.Frame(tabControl)
+VideoPlayerTab = ttk.Frame(tabControl)
+MusicPlayerTab = ttk.Frame(tabControl)
 HelpTab = ttk.Frame(tabControl)
 CreditsTab = ttk.Frame(tabControl)
 
 tabControl.add(DownloaderTab, text="Downloader")
 tabControl.add(ConverterTab, text="Converter")
+tabControl.add(CalculatorTab, text="Calculator")
 tabControl.add(AutoclickerTab, text="Autoclicker")
+tabControl.add(AutoDownloaderTab, text="Auto Downloader")
+tabControl.add(FileArchiverTab, text="File Archiver")
+tabControl.add(VideoPlayerTab, text="Video Player")
+tabControl.add(MusicPlayerTab, text="Music Player")
 tabControl.add(HelpTab, text="Help")
 tabControl.add(CreditsTab, text="Credits")
 
@@ -125,6 +135,22 @@ startconverter = tk.Button(ConverterTab, text="Start\nConverter", width=10, heig
 # Autoclicker Tab
 
 autoclickerlabelframe = tk.LabelFrame(AutoclickerTab, text="Autoclicker", bg="grey94", width=460, height=300)
+
+# Auto Downloader
+
+autodownloaderlabelframe = tk.LabelFrame(AutoDownloaderTab, text="Auto Downloader", bg="grey94", width=460, height=300)
+
+# File Archiver Tab
+
+filearchiverlabelframe = tk.LabelFrame(FileArchiverTab, text="File Archiver", bg="grey94", width=460, height=300)
+
+# Video Player Tab
+
+videoplayerlabelframe = tk.LabelFrame(VideoPlayerTab, text="Video Player", bg="grey94", width=460, height=300)
+
+# Music Player Tab
+
+musicplayerlabelframe = tk.LabelFrame(MusicPlayerTab, text="Music Player", bg="grey94", width=460, height=300)
 
 # Help Tab
 
