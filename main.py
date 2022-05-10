@@ -69,6 +69,8 @@ def autoclicker():
         pyautogui.click(randomx, randomy)
 
 
+# UNDER THIS LINE IS MOSTLY TKINTER STUFF + GUI STUFF
+        
 mainwindow = tk.Tk()
 mainwindow.geometry("475x330")
 mainwindow.resizable(0, 0)
