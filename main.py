@@ -136,7 +136,7 @@ startconverter = tk.Button(ConverterTab, text="Start\nConverter", width=10, heig
 
 autoclickerlabelframe = tk.LabelFrame(AutoclickerTab, text="Autoclicker", bg="grey94", width=460, height=300)
 
-# Auto Downloader
+# Auto Downloader Tab
 
 autodownloaderlabelframe = tk.LabelFrame(AutoDownloaderTab, text="Auto Downloader", bg="grey94", width=460, height=300)
 
