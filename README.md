@@ -9,7 +9,7 @@ I will eventually add a description, documentation and a help section to this re
   <img src="https://github.com/BritishSpuds/Vault/blob/main/Assets/Graphics/Description%20Graphic.png?raw=true" alt="Vault Logo"/>
 </p>
 
-### DESCRIPTION ###
+## DESCRIPTION ##
 Vault will be an open source bit-of-everything program that can do, you guessed it, a bit of everything. It will (hopefully) contain the following features (at v1.0.0):
 - Video Downloader (done)
 - File Converter
