@@ -86,6 +86,8 @@ AutoDownloaderTab = ttk.Frame(tabControl)
 FileArchiverTab = ttk.Frame(tabControl)
 VideoPlayerTab = ttk.Frame(tabControl)
 MusicPlayerTab = ttk.Frame(tabControl)
+AntiAFKTab = ttk.Frame(tabControl)
+UUIDGeneratorTab = ttk.Frame(tabControl)
 HelpTab = ttk.Frame(tabControl)
 CreditsTab = ttk.Frame(tabControl)
 
@@ -97,6 +99,8 @@ tabControl.add(AutoDownloaderTab, text="Auto Downloader")
 tabControl.add(FileArchiverTab, text="File Archiver")
 tabControl.add(VideoPlayerTab, text="Video Player")
 tabControl.add(MusicPlayerTab, text="Music Player")
+tabControl.add(AntiAFKTab, text="Anti-AFK")
+tabControl.add(UUIDGeneratorTab, text="UUID Generator")
 tabControl.add(HelpTab, text="Help")
 tabControl.add(CreditsTab, text="Credits")
 
@@ -166,6 +170,14 @@ videoplayerlabelframe = tk.LabelFrame(VideoPlayerTab, text="Video Player", bg="g
 
 musicplayerlabelframe = tk.LabelFrame(MusicPlayerTab, text="Music Player", bg="grey94", width=460, height=300)
 
+# Anti-AFK Tab
+
+antiafklabelframe = tk.LabelFrame(AntiAFKTab, text="Anti-AFK", bg="grey94", width=460, height=300)
+
+# UUID Generator
+
+uuidgeneratorlabelframe = tk.LabelFrame(UUIDGeneratorTab, text="UUID Generator", bg="grey94", width=460, height=300)
+
 # Help Tab
 
 helplabelframe = tk.LabelFrame(HelpTab, text="Help", bg="grey94", width=460, height=300)
@@ -180,6 +192,11 @@ tabControl.pack(expand=1, fill="both")
 downloaderlabelframe.place(x=5, y=0)
 converterlabelframe.place(x=5, y=0)
 autoclickerlabelframe.place(x=5, y=0)
+autodownloaderlabelframe.place(x=5, y=0)
+videoplayerlabelframe.place(x=5, y=0)
+musicplayerlabelframe.place(x=5, y=0)
+antiafklabelframe.place(x=5, y=0)
+uuidgeneratorlabelframe.place(x=5, y=0)
 helplabelframe.place(x=5, y=0)
 creditslabelframe.place(x=5, y=0)
 urllabel.place(x=15, y=25)
