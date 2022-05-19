@@ -188,6 +188,8 @@ helplabel = tk.Label(HelpTab, fg="black", bg="grey94", text="I will eventually p
 creditslabelframe = tk.LabelFrame(CreditsTab, text="Credits", bg="grey94", width=460, height=300)
 creditslabel = tk.Label(CreditsTab, fg="black", bg="grey94", text="I will eventually put some credits here :)")
 
+# Place Wigets
+
 tabControl.pack(expand=1, fill="both")
 downloaderlabelframe.place(x=5, y=0)
 converterlabelframe.place(x=5, y=0)
@@ -214,3 +216,4 @@ creditslabel.place(x=15, y=15)
 
 
 mainwindow.mainloop()
+
